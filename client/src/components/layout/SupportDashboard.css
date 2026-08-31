@@ -1,0 +1,177 @@
+.support-dashboard {
+  min-height: 100vh;
+  padding: 24px;
+  background-color: #f1f5f4;
+}
+
+.dashboard-header {
+  max-width: 1400px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 28px;
+}
+
+.dashboard-header p {
+  margin: 6px 0 0;
+  color: #6b7280;
+}
+
+.agent-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.agent-profile > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.agent-profile span {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.agent-avatar {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: #128c7e;
+  color: white;
+  font-weight: 700;
+}
+
+.inbox-layout {
+  width: 100%;
+  max-width: 1400px;
+  height: calc(100vh - 120px);
+  min-height: 550px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid #dfe5e3;
+  border-radius: 14px;
+  background-color: white;
+  box-shadow: 0 10px 30px rgb(15 23 42 / 8%);
+}
+
+.conversation-panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border-right: 1px solid #e5e7eb;
+  background-color: white;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.panel-header h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 20px;
+}
+
+.panel-header p {
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.conversation-count {
+  min-width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background-color: #dcf8c6;
+  color: #087f5b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.conversation-placeholder {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #6b7280;
+  text-align: center;
+}
+
+.chat-panel {
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  background-color: #f8faf9;
+}
+
+.chat-placeholder {
+  max-width: 420px;
+  padding: 32px;
+  text-align: center;
+}
+
+.chat-placeholder-icon {
+  margin-bottom: 16px;
+  font-size: 52px;
+}
+
+.chat-placeholder h2 {
+  margin: 0 0 10px;
+  color: #1f2937;
+}
+
+.chat-placeholder p {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .support-dashboard {
+    padding: 16px;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+  }
+
+  .dashboard-header p,
+  .agent-profile > div:last-child {
+    display: none;
+  }
+
+  .inbox-layout {
+    height: auto;
+    min-height: calc(100vh - 100px);
+    grid-template-columns: 1fr;
+  }
+
+  .conversation-panel {
+    min-height: 300px;
+    border-right: 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .chat-panel {
+    min-height: 350px;
+  }
+}
