@@ -1,5 +1,5 @@
 import type { Conversation } from "../../types/chat";
-
+import "./ConversationList.css";
 interface ConversationItemProps {
   conversation: Conversation;
 }
