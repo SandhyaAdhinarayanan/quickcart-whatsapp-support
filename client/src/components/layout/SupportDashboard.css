@@ -118,8 +118,8 @@
 
 .chat-panel {
   min-width: 0;
-  display: grid;
-  place-items: center;
+  min-height: 0;
+  overflow: hidden;
   background-color: #f8faf9;
 }
 

@@ -1,9 +1,20 @@
-
-import { mockConversations } from "../../data/mockChatData";
+import {
+  mockConversations,
+  mockMessages,
+} from "../../data/mockChatData";
+import ChatWindow from "../chat/ChatWindow";
 import ConversationList from "../conversations/ConversationList";
 import "./SupportDashboard.css";
 
 function SupportDashboard() {
+    const previewConversation = mockConversations[0];
+
+  const previewMessages = previewConversation
+    ? mockMessages.filter(
+        (message) =>
+          message.conversationId === previewConversation.id,
+      )
+    : [];
   return (
     <main className="support-dashboard">
       <header className="dashboard-header">
@@ -38,18 +49,18 @@ function SupportDashboard() {
           <ConversationList conversation={mockConversations} />
         </aside>
 
-        <section className="chat-panel">
-          <div className="chat-placeholder">
-            <div className="chat-placeholder-icon">💬</div>
-
-            <h2>QuickCart WhatsApp Support</h2>
-
-            <p>
-              Select a customer conversation to view and respond to
-              messages.
-            </p>
-          </div>
-        </section>
+<section className="chat-panel">
+  {previewConversation ? (
+    <ChatWindow
+      conversation={previewConversation}
+      messages={previewMessages}
+    />
+  ) : (
+    <div className="chat-placeholder">
+      <p>No conversation available.</p>
+    </div>
+  )}
+</section>
       </section>
     </main>
   );
