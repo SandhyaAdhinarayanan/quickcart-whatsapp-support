@@ -1,3 +1,6 @@
+
+import { mockConversations } from "../../data/mockChatData";
+import ConversationList from "../conversations/ConversationList";
 import "./SupportDashboard.css";
 
 function SupportDashboard() {
@@ -27,12 +30,12 @@ function SupportDashboard() {
               <p>Customer messages</p>
             </div>
 
-            <span className="conversation-count">3</span>
+            <span className="conversation-count">
+              {mockConversations.length}
+             </span>          
           </div>
 
-          <div className="conversation-placeholder">
-            <p>Conversation list will be added in Step 3.</p>
-          </div>
+          <ConversationList conversation={mockConversations} />
         </aside>
 
         <section className="chat-panel">

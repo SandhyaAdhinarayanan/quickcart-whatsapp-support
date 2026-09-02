@@ -1,0 +1,132 @@
+.conversation-list {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+.conversation-item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  border: 0;
+  border-bottom: 1px solid #edf0ef;
+  background-color: white;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.conversation-item:hover {
+  background-color: #f4f8f7;
+}
+
+.conversation-item:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid #128c7e;
+  outline-offset: -2px;
+}
+
+.contact-avatar {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: #d9fdd3;
+  color: #087f5b;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.conversation-content {
+  min-width: 0;
+  flex: 1;
+  position: relative;
+}
+
+.conversation-top-row,
+.conversation-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.conversation-top-row h3 {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #111827;
+  font-size: 15px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conversation-top-row time {
+  flex-shrink: 0;
+  color: #8a9491;
+  font-size: 11px;
+}
+
+.conversation-bottom-row {
+  margin-top: 5px;
+}
+
+.conversation-bottom-row p {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #66736f;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.unread-count {
+  min-width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  padding: 0 6px;
+  border-radius: 11px;
+  background-color: #25d366;
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.conversation-status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.conversation-status--open {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.conversation-status--resolved {
+  background-color: #f3f4f6;
+  color: #6b7280;
+}
+
+.empty-conversations {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: #6b7280;
+  text-align: center;
+}
